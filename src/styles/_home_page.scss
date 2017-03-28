@@ -10,6 +10,10 @@
 		background: url('../icons/bride_and_groom_no_outline.png') no-repeat center;
 		background-size: contain;
 		z-index: 2;
+
+		@include media-below($tablet-portrait-min) {
+			height: 350px;
+		}
 	}
 
 	.home-content {
@@ -27,27 +31,121 @@
 			border: 8px solid lightblue;
 		}
 
-		.wedding-cakes-table {
+		.wedding-cakes-section {
 			height: 300px;
 			margin: 0 25px;
 			position: relative;
+			text-align: center;
 
-			.wedding-cakes {
-				height: 200px;
-				width: 100%;
-				position: absolute;
-				background: url('../icons/wedding-cakes.png') no-repeat center;
-				background-size: contain;
-				z-index: 3;
+			@include media-below(580px) {
+				margin-top: 100px;	
 			}
 
-			.table {
+			.wedding-cake {
+				height: 225px;
+				width: 225px;
+				display: inline-block;
+				position: relative;
+				z-index: 1;
+
+				&:hover {
+					cursor: pointer;
+				}
+
+				@include media-between($tablet-landscape-min, $desktop-min) {
+					height: 190px;
+					width: 190px;
+				}
+
+				@include media-between($tablet-portrait-max, $tablet-landscape-min) {
+					height: 180px;
+					width: 180px;
+				}
+
+				@include media-between($tablet-portrait-min, $tablet-portrait-max) {
+					height: 140px;
+					width: 140px;
+				}
+
+				@include media-below($mobile-max) {
+					height: 180px;
+					width: 180px;			
+				}
+
+				@include media-between(580px, $mobile-max) {
+					height: 170px;
+					width: 170px;	
+				}
+
+				@include media-below(580px) {
+					margin-top: 150px;
+					display: block;			
+					left: 50%;
+			    transform: translate(-50%, -50%);			
+				}
+
+				&.japan {
+					background: url('../icons/japan-cake.png') no-repeat center;
+					background-size: contain;				
+				}
+
+				&.taiwan {
+					background: url('../icons/taiwan-cake.png') no-repeat center;
+					background-size: contain;
+				}
+
+				&.hawaii {
+					background: url('../icons/hawaii-cake.png') no-repeat center;
+					background-size: contain;
+				}
+
+				.cake-title {
+					position: absolute;
+					font-size: 21px;
+					background-color: white;
+					color: #efa900;
+					padding: 5px 12px;
+					width: 110px;
+
+			    bottom: -20px;
+			    left: 50%;
+			    transform: translate(-50%, -50%);
+			    font-family: "Pacifico";
+			    
+				  &:hover {
+				  	color: #908527;
+				  }
+
+				  @include media-between($tablet-landscape-min, $desktop-min) {
+				  	font-size: 18px;
+						width: 100px;
+					}
+
+					@include media-between($tablet-portrait-max, $tablet-landscape-min) {
+						font-size: 16px;
+						width: 90px;
+					}
+
+					@include media-between($tablet-portrait-min, $tablet-portrait-max) {
+						font-size: 14px;
+						width: 80px;
+					}
+
+					@include media-below(580px) {
+						bottom: -85px;
+						width: 140px;
+						border: 3px solid black;	
+						margin-top: 100px;	
+					}
+				}
+			}
+
+			.wedding-cake-table {
 				height: 200px;
-				position: absolute;
-				top: 90px;
+				position: relative;
+				margin-top: -100px;
 				background: url('../icons/wedding-cake-table.png') no-repeat center;
 				background-size: contain;
-				z-index: 2;
 			}
 		}
 	}
