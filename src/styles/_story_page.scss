@@ -1,23 +1,25 @@
 .story-page {
   .story-items {
-    margin: 0 15px;
+    margin: 0 15px 75px;
+
+    &::after { 
+      content: " "; 
+      display: block;
+      clear: both;
+    } 
 
     .story-item {
-      height: 300px;
-      background-color: white;
-      border: 5px solid black;
-      padding: 5px;
+      text-align: center;
 
       .story-item-image {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: url("https://img.clipartfest.com/9f90788620cd380ceee28a3f4ffdaee2_-silhouette-vector-stock-skydiving-silhouette-clipart_1300-1261.jpeg") no-repeat;
-        background-size: contain;
+        position: relative;
+        height: 270px;
+        width: 270px;
+        display: inline-block;
 
         &:hover {
+          cursor: pointer;
+
           filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
           /* This works in IE 8 & 9 too */
           /* ... but also 5, 6, 7 */
@@ -33,6 +35,64 @@
           /* Firefox 0.9+, Safari 2?, Chrome any?
           /* Opera 9+, IE 9+ */
           opacity: 0;
+        }
+
+        &.year-2008 {
+          top: 25px;
+          background: url("../icons/our_story/OurStoryIcon_2008.png") no-repeat;
+          background-size: contain;
+        }
+
+        &.year-2009 {
+          background: url("../icons/our_story/OurStoryIcon_2009.png") no-repeat;
+          background-size: contain;
+        }
+
+        &.year-2010-2011 {
+          background: url("../icons/our_story/OurStoryIcon_2010-2011.png") no-repeat;
+          background-size: contain;
+        }
+
+        &.year-2012 {
+          background: url("../icons/our_story/OurStoryIcon_2012.png") no-repeat;
+          background-size: contain;
+
+          @include media_above($tablet-landscape-min) {
+            left: 30px;
+          }
+        }
+
+        &.year-2013 {
+          background: url("../icons/our_story/OurStoryIcon_2013.png") no-repeat;
+          background-size: contain;
+        }
+
+        &.year-2014-2015 {
+          background: url("../icons/our_story/OurStoryIcon_2014-2015.png") no-repeat;
+          background-size: contain;
+        }
+
+        &.year-2015-2016 {
+          background: url("../icons/our_story/OurStoryIcon_2015-2016.png") no-repeat;
+          background-size: contain;
+
+          @include media_above($tablet-landscape-min) {
+            left: 40px;
+          }
+        }
+
+        &.year-2016 {
+          background: url("../icons/our_story/OurStoryIcon_2016.png") no-repeat;
+          background-size: contain;
+
+          @include media_above($tablet-landscape-min) {
+            left: 20px;
+          }
+        }
+
+        &.year-2017 {
+          background: url("../icons/our_story/OurStoryIcon_2017.png") no-repeat;
+          background-size: contain;
         }
       }
     }
