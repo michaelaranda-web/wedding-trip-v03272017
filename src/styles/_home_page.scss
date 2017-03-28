@@ -11,7 +11,7 @@
 		background-size: contain;
 		z-index: 2;
 
-		@include media-below($tablet-portrait-min) {
+		@include media-below($mobile-max) {
 			height: 350px;
 		}
 	}
@@ -29,6 +29,10 @@
 			font-family: "Life Savers";
 			background-color: white;
 			border: 8px solid lightblue;
+
+			@include media-below(900px) {
+				font-size: 40px;
+			}
 		}
 
 		.wedding-cakes-section {
@@ -57,27 +61,21 @@
 					width: 190px;
 				}
 
-				@include media-between($tablet-portrait-max, $tablet-landscape-min) {
-					height: 180px;
-					width: 180px;
-				}
-
 				@include media-between($tablet-portrait-min, $tablet-portrait-max) {
-					height: 140px;
-					width: 140px;
-				}
-
-				@include media-below($mobile-max) {
-					height: 180px;
-					width: 180px;			
+					margin-top: 50px;
+					height: 145px;
+					width: 145px;
 				}
 
 				@include media-between(580px, $mobile-max) {
+					margin-top: 50px;
 					height: 170px;
 					width: 170px;	
 				}
 
 				@include media-below(580px) {
+					height: 180px;
+					width: 180px;			
 					margin-top: 150px;
 					display: block;			
 					left: 50%;
@@ -121,14 +119,14 @@
 						width: 100px;
 					}
 
-					@include media-between($tablet-portrait-max, $tablet-landscape-min) {
+					@include media-between($tablet-portrait-min, $tablet-portrait-max) {
 						font-size: 16px;
 						width: 90px;
 					}
 
-					@include media-between($tablet-portrait-min, $tablet-portrait-max) {
-						font-size: 14px;
-						width: 80px;
+					@include media-between(580px, $mobile-max) {
+						font-size: 18px;
+						width: 100px;
 					}
 
 					@include media-below(580px) {
@@ -146,6 +144,10 @@
 				margin-top: -100px;
 				background: url('../icons/wedding-cake-table.png') no-repeat center;
 				background-size: contain;
+
+				@include media-below(580px) {
+					visibility: hidden;
+				}
 			}
 		}
 	}
