@@ -30,18 +30,23 @@
 		.wedding-cakes-table {
 			height: 300px;
 			margin: 0 25px;
+			position: relative;
 
 			.wedding-cakes {
-				height: 150px;
+				height: 200px;
+				width: 100%;
 				position: absolute;
 				background: url('../icons/wedding-cakes.png') no-repeat center;
+				background-size: contain;
 				z-index: 3;
 			}
 
 			.table {
-				height: 150px;
+				height: 200px;
 				position: absolute;
+				top: 90px;
 				background: url('../icons/wedding-cake-table.png') no-repeat center;
+				background-size: contain;
 				z-index: 2;
 			}
 		}
