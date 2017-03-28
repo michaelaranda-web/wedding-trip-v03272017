@@ -1,0 +1,48 @@
+@mixin button-turned-link {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 6px;
+}
+
+#site-header {
+	height: 35px;
+	background: #ba0520; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, #ba0520 , #66214e); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #ba0520, #66214e); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #ba0520, #66214e); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #ba0520 , #66214e); /* Standard syntax */
+
+
+	.site-title {
+		font-weight: bold;
+ 		font-size: 15px;
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		letter-spacing: 2px;
+		line-height: 1.42857143;
+		padding: 5px 0 0 15px;
+	}
+
+	.header-links {
+		float: right;
+
+		.header-dropdown-menu {
+      float: left;
+
+			.dropdown {
+				.btn-default {
+					@include button-turned-link;
+				}
+
+				.btn {
+					float: none;
+				}
+			}
+		}
+
+    .our-story-link {
+      @include button-turned-link;
+      float: left;
+    }
+	}
+}

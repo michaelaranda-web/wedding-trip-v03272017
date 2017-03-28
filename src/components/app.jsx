@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Header } from './header.jsx'
 
-export default class App extends React.Component {
-  render () {
-    return (
-      <div>
-        <h1>Change me</h1>
-      </div>
-    )
-  }
+class App extends React.Component {
+	render() {
+	  return (
+	  	<div>
+	  		<Header />
+	  		{this.props.children}
+	  	</div>
+	  )		
+  }		
 }
+
+export default App;

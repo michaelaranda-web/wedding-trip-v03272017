@@ -1,0 +1,20 @@
+// Media Query Helpers
+$mobile-min: 320px;
+$mobile-max: 767px;
+$tablet-portrait-min: 768px;
+$tablet-portrait-max: 991px;
+$tablet-landscape-min: 992px;
+$tablet-landscape-max: 1199px;
+$desktop-min: 1200px;
+$desktop-max: 1600px;
+
+/*Responsive query mixins */
+@mixin media-above($min) {
+  @media (min-width: $min) { @content; }
+}
+@mixin media-below($max) {
+  @media (max-width: $max) { @content; }
+}
+@mixin media-between($min, $max) {
+  @media (min-width: $min) and (max-width: $max) { @content; }
+}

@@ -1,0 +1,66 @@
+.coming-soon {
+	width: 700px;
+	height: 100px;
+	font-size: 64px;
+	font-family: "Lobster";
+	text-align: center;
+	background-color: white;
+	border: 3px solid darkred;
+	margin-top: 50px;
+
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%) rotate(-0.005turn);
+}
+
+.long-tile {
+	height: 350px;
+	margin-bottom: 90px;
+
+	.tile-body {
+		height: 85%;
+		background-color: white;
+		box-shadow: 5px 5px 15px #232322;
+	}
+
+	h4 {
+		margin-top: 0;
+		font-weight: bold;
+		font-size: 40px;
+
+		&.title-right {
+			text-align: right;
+			padding-right: 10px;
+		}
+
+		&.title-left {
+			text-align: left;
+			padding-left: 10px;
+		}
+	}
+}
+
+.tile-side-buffer {
+
+}
+
+.section-divider {
+	border-top: 2px solid black;
+	background-color: gray;
+
+	.cat-icon {
+		width: 100px;
+		height: 100px;
+		margin-left: 45%;
+		background: url(../icons/cat.png) no-repeat;
+		background-size: contain;
+	}
+
+	.dog-icon {
+		width: 100px;
+		height: 100px;
+		margin-left: 45%;
+		background: url(../icons/dog.png) no-repeat;
+		background-size: contain;
+	}
+}
