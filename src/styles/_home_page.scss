@@ -45,6 +45,11 @@
 
 				.welcome-header {
 					font-weight: bold;
+					font-size: 20px;
+				}
+
+				p {
+					padding-left: 10px;
 				}
 
 				@include media-below($mobile-max) {

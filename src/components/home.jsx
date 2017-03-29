@@ -12,15 +12,14 @@ export class Home extends React.Component {
         	<h1>Martina&nbsp;and&nbsp;Michael's Wedding&nbsp;Trip&nbsp;2017</h1>
           <div className="welcome-message col-xs-12">
             <div className="col-sm-6 col-xs-12 left-section">
-              <span className="welcome-header">Welcome</span>
-              <p>This is some test text I am putting in to see what happens.</p>
+              <p>Documenting the <strong>M&M Wedding Trip</strong> -- A wedding celebration where we get to have our cake and eat it too.</p>
             </div>
             <div className="col-sm-6 col-xs-12 right-section">
               <div>
                 <Link to='/adventures'>Trip Itinerary</Link>
               </div>
               <div>
-                <Link to='/story'>Our Story</Link>
+                <Link to='/story'>The M&M Story</Link>
               </div>
               <div>
                 <Link to='/donate'>Donate to the Trip Fund</Link>
