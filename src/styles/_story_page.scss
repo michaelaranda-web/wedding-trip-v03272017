@@ -10,6 +10,7 @@
 
     .story-item {
       text-align: center;
+      margin: 15px 0;
 
       .story-item-image {
         position: relative;
@@ -38,9 +39,9 @@
         }
 
         &.year-2008 {
-          top: 25px;
           background: url("../icons/our_story/OurStoryIcon_2008.png") no-repeat;
           background-size: contain;
+          top: 25px;
         }
 
         &.year-2009 {
@@ -56,10 +57,7 @@
         &.year-2012 {
           background: url("../icons/our_story/OurStoryIcon_2012.png") no-repeat;
           background-size: contain;
-
-          @include media_above($tablet-landscape-min) {
-            left: 30px;
-          }
+          left: 30px;
         }
 
         &.year-2013 {
@@ -72,27 +70,47 @@
           background-size: contain;
         }
 
+        &.year-2015 {
+          background: url("../icons/our_story/OurStoryIcon_2015.png") no-repeat;
+          background-size: contain;
+          left: 20px;
+        }
+
         &.year-2015-2016 {
           background: url("../icons/our_story/OurStoryIcon_2015-2016.png") no-repeat;
           background-size: contain;
-
-          @include media_above($tablet-landscape-min) {
-            left: 40px;
-          }
+          left: 30px;
         }
 
         &.year-2016 {
           background: url("../icons/our_story/OurStoryIcon_2016.png") no-repeat;
           background-size: contain;
-
-          @include media_above($tablet-landscape-min) {
-            left: 20px;
-          }
+          left: 30px;
         }
 
         &.year-2017 {
           background: url("../icons/our_story/OurStoryIcon_2017.png") no-repeat;
           background-size: contain;
+          left: 30px;
+
+          @include media-above($tablet-landscape-min) {
+            width: 400px;
+            height: 400px;
+          }
+        }
+      }
+
+      &.year-2017 {
+        background-color: #fff5c6;
+
+        @include media-between($tablet-portrait-min, $tablet-landscape-min) {
+          background-color: transparent;
+        }
+
+        @include media-above($tablet-landscape-min) {
+          width: 100%;
+          margin-top: 100px;
+          padding-bottom: 20px;
         }
       }
     }

@@ -25,12 +25,15 @@ export class Story extends React.Component {
               <div className="story-item-image year-2014-2015"></div>
             </div>
             <div className="story-item col-md-4 col-sm-6 col-xs-12">
+              <div className="story-item-image year-2015"></div>
+            </div>
+            <div className="story-item col-md-4 col-sm-6 col-xs-12">
               <div className="story-item-image year-2015-2016"></div>
             </div>
             <div className="story-item col-md-4 col-sm-6 col-xs-12">
               <div className="story-item-image year-2016"></div>
             </div>
-            <div className="story-item col-md-4 col-sm-6 col-xs-12">
+            <div className="story-item year-2017 col-md-4 col-sm-6 col-xs-12">
               <div className="story-item-image year-2017"></div>
             </div>
           </div>
