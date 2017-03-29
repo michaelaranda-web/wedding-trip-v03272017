@@ -4,6 +4,7 @@ import App from './app.jsx';
 import { Home } from './home.jsx';
 import { Adventures } from './adventures.jsx';
 import { Story } from './story.jsx';
+import { Donate } from './donate.jsx';
 import { Japan } from './japan.jsx';
 import { Taiwan } from './taiwan.jsx';
 import { Hawaii } from './hawaii.jsx';
@@ -16,6 +17,7 @@ export default (
     <Route path='hawaii' component={Hawaii} />
     <Route path='adventures' component={Adventures} />
     <Route path='story' component={Story} />
+    <Route path='donate' component={Donate} />
   	<Route path='*' component={NotFound} />
     <IndexRoute component={Home} />
   </Route>

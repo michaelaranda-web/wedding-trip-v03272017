@@ -1,0 +1,93 @@
+.donate-page {
+	min-height: 100%;
+
+	background: url('../icons/gold_dots_background.png') no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .header-section {
+    @include media-below($tablet-portrait-max) {
+      max-width: 425px;
+    }
+
+    width: 850px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .title {
+      font-size: 65px;
+      font-family: "Pacifico";
+
+      .floating-heads {
+        display: inline-block;
+        position: relative;
+        top: 22px;
+        height: 130px;
+        width: 250px;
+        background-image: url('../icons/floating_heads_light.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  .donation-section {
+  	min-height: 600px;
+  	height: 60%;
+
+  	margin-top: 30px;
+  	padding: 0 20px 40px;
+
+  	background-color: white;
+
+  	.explanation {
+  		margin: 30px 40px;
+  	}
+
+  	#donation-browser {
+  		min-height: 480px;
+
+  		.donation-categories {
+  			min-height: 480px;
+  			background-color: #f1f1f1;
+  			border-right: 5px solid white;
+
+	  		ul {
+	  			padding: 10px 0;
+
+		  		a {
+		  			background-color: #5eb9e4;
+		  		}
+	  		}
+  		}
+
+  		.donation-tab-content {
+  			background: url('../icons/donations-background.png') no-repeat center;
+  			background-size: contain;
+
+	  		.tab-content {
+	  			min-height: 480px;
+	  			padding: 15px 0;
+
+	  			h2 {
+	  				margin: 0 0 20px;	
+	  			}
+
+	  			h4 {
+	  				color: #3d7da5;
+	  			}
+	  		}
+
+	  		.monetary-donation-tab-content {
+	  			min-height: 450px; //hack to cover background only for Monetary donation pane's background
+	  			background-color: white;
+	  		}
+
+	  		.coming-soon-placeholder {
+	  			font-size: 24px;
+	  		}
+  		}
+  	}
+  }
+}

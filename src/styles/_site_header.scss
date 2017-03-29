@@ -27,7 +27,7 @@
 		float: right;
 
 		.header-dropdown-menu {
-      float: left;
+      	float: left;
 
 			.dropdown {
 				.btn-default {
@@ -40,9 +40,10 @@
 			}
 		}
 
-    .our-story-link {
+    .button-link {
       @include button-turned-link;
       float: left;
+      margin: 0 10px;
     }
 	}
 }
