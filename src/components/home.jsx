@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { LinkContainer } from 'react-router-bootstrap';
 
 export class Home extends React.Component {
@@ -8,21 +9,25 @@ export class Home extends React.Component {
       <div className="home-page">
         <div className="bride-and-groom col-sm-4" />
         <div className="home-content col-sm-8">
-        	<h1>Martina and Michael's Wedding&nbsp;Trip&nbsp;2017</h1>
-          <div className="welcome-message">
-            <div className="col-sm-6 left-section">
-              Welcome
+        	<h1>Martina&nbsp;and&nbsp;Michael's Wedding&nbsp;Trip&nbsp;2017</h1>
+          <div className="welcome-message col-xs-12">
+            <div className="col-sm-6 col-xs-12 left-section">
+              <span className="welcome-header">Welcome</span>
               <p>This is some test text I am putting in to see what happens.</p>
             </div>
-            <div className="col-sm-6 right-section">
-              <ul>
-                <li>Trip Itinerary</li>
-                <li>Our Story</li>
-                <li>Donate to Trip Fund</li>
-              </ul>
+            <div className="col-sm-6 col-xs-12 right-section">
+              <div>
+                <Link to='/adventures'>Trip Itinerary</Link>
+              </div>
+              <div>
+                <Link to='/story'>Our Story</Link>
+              </div>
+              <div>
+                <Link to='/donate'>Donate to the Trip Fund</Link>
+              </div>
             </div>
           </div>
-        	<div className="wedding-cakes-section">
+        	<div className="wedding-cakes-section col-xs-12">
             <LinkContainer to={{ pathname: 'japan'}}>
               <div className="wedding-cake japan" >
                 <span className="cake-title">Japan ></span>
@@ -41,7 +46,6 @@ export class Home extends React.Component {
             <div className="wedding-cake-table" />
           </div>
         </div>
-        <div className="bottom-section col-sm-12"></div>
       </div>
     );
   }

@@ -1,6 +1,6 @@
 .home-page {
 	position: relative;
-	height: 80%;
+	min-height: 100%;
 	background: url('../icons/gold_dots_background.png') no-repeat;
 	background-size: cover;
 
@@ -19,16 +19,16 @@
 	.home-content {
 		padding: 0;
 		z-index: 1;
+		background-color: white;
+		min-height: 100%;
 
 		h1 {
 			text-align: center;
 			padding: 15px;
 			margin: 20px;
 			position: relative;
-			font-size: 40px;
+			font-size: 60px;
 			font-family: "Life Savers";
-			background-color: white;
-			border: 8px solid lightblue;
 
 			@include media-below(900px) {
 				font-size: 40px;
@@ -36,19 +36,42 @@
 		}
 
 		.welcome-message {
-			height: 100px;
+			height: 90px;
 			padding: 15px;
-			margin: 20px 20px 0;
-			background-color: white;
+			margin-bottom: 15px;
 
 			.left-section {
 				border-right: 1px solid lightgray;
+
+				.welcome-header {
+					font-weight: bold;
+				}
+
+				@include media-below($mobile-max) {
+					text-align: center;
+					border-right: none;
+				}
+			}
+
+			.right-section {
+				#{$a-tags} {
+				  color: #177db1;
+				  text-decoration: none;
+				}
+
+				#{$a-tags-hover} {
+				  color: #92bbd0;
+				}
+
+				@include media-below($mobile-max) {
+					text-align: center;
+				}
 			}
 		}
 
 		.wedding-cakes-section {
 			height: 300px;
-			margin: 0 25px;
+			margin: 0;
 			position: relative;
 			text-align: center;
 
@@ -73,13 +96,12 @@
 				}
 
 				@include media-between($tablet-portrait-min, $tablet-portrait-max) {
-					margin-top: 50px;
 					height: 145px;
 					width: 145px;
 				}
 
 				@include media-between(580px, $mobile-max) {
-					margin-top: 50px;
+					margin-top: 30px;
 					height: 170px;
 					width: 170px;	
 				}
@@ -116,10 +138,10 @@
 					padding: 5px 12px;
 					width: 110px;
 
-				    bottom: -20px;
-				    left: 50%;
-				    transform: translate(-50%, -50%);
-				    font-family: "Pacifico";
+			    bottom: -20px;
+			    left: 50%;
+			    transform: translate(-50%, -50%);
+			    font-family: "Pacifico";
 			    
 				  &:hover {
 				  	color: #908527;
@@ -143,7 +165,7 @@
 					@include media-below(580px) {
 						bottom: -85px;
 						width: 140px;
-						border: 3px solid black;	
+						border: 1px solid black;	
 						margin-top: 100px;	
 					}
 				}
