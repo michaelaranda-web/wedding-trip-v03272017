@@ -4,7 +4,12 @@ export class Story extends React.Component {
   render() {
     return (
         <div className="story-page">
-          <h1>Our Story</h1>
+          <div className="header-section">
+            <div className="title">
+              Our <span className="floating-heads"></span> Story
+            </div>
+          </div>
+
           <div className="story-items">
             <div className="story-item col-md-4 col-sm-6 col-xs-12">
               <div className="story-item-image year-2008"></div>
