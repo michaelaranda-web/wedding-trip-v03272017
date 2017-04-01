@@ -32,7 +32,7 @@ export class Donate extends React.Component {
       <div className="donate-page">
         <div className="header-section">
           <div className="title">
-            Donate to <span className="floating-heads"></span> Our Trip!
+            Sponsor <span className="floating-heads"></span> Our Trip!
           </div>
         </div>
 

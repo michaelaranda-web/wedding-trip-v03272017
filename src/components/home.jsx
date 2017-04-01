@@ -22,7 +22,7 @@ export class Home extends React.Component {
                 <Link to='/story'>The M&M Story</Link>
               </div>
               <div>
-                <Link to='/donate'>Donate to the Trip Fund</Link>
+                <Link to='/donate'>Sponsor Our Trip</Link>
               </div>
             </div>
           </div>

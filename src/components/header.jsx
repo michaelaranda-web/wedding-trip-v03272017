@@ -11,7 +11,7 @@ export class Header extends React.Component {
 	  		<div className="header-links">
 					<HeaderDropdownMenu title="Our Adventures" />
 					<Button className="button-link"><Link to={`/story`}>Our Story</Link></Button>
-					<Button className="button-link"><Link to={`/donate`}>Donate</Link></Button>
+					<Button className="button-link"><Link to={`/donate`}>Sponsor Our Trip</Link></Button>
 	  		</div>
 	  	</div>
 	  );
