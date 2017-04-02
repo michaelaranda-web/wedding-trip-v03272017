@@ -20,6 +20,7 @@
       font-family: "Pacifico";
       display: inline-block;
       position: relative;
+			bottom: 20px;
 
       .floating-heads {
         display: inline-block;
@@ -27,7 +28,7 @@
         top: 22px;
         height: 130px;
         width: 190px;
-				margin-left: 20px;
+				margin-left: 10px;
         background-image: url('../icons/floating_heads_light.png');
         background-repeat: no-repeat;
         background-size: contain;
@@ -35,43 +36,48 @@
     }
   }
 
+	.explanation {
+		background-color: white;
+		padding: 15px 40px;
+		border-top: 5px solid goldenrod;
+		border-bottom: 5px solid goldenrod;
+		font-size: 13px;
+	}
+
   .donation-section {
   	min-height: 600px;
-  	height: 60%;
-
   	margin-top: 30px;
   	padding: 0 20px 40px;
 
   	background-color: white;
 
-  	.explanation {
-  		margin: 30px 40px;
-  	}
-
   	#donation-browser {
   		min-height: 480px;
+			padding-bottom: 100px;
+			background: url('../icons/donations-background.png') no-repeat;
 
   		.donation-categories {
-  			min-height: 480px;
-  			background-color: #f1f1f1;
-  			border-right: 5px solid white;
-
 	  		ul {
 	  			padding: 10px 0;
 
 		  		a {
-		  			background-color: #5eb9e4;
+						background-color: #e0ad39;
+						font-weight: bold;
 		  		}
 	  		}
+
+				@include media-above($mobile-max) {
+					//min-height: 480px;
+				}
   		}
 
   		.donation-tab-content {
-  			background: url('../icons/donations-background.png') no-repeat center;
-  			background-size: contain;
+				@include media-below($tablet-portrait-min) {
+					//text-align: center;
+				}
 
 	  		.tab-content {
 	  			min-height: 480px;
-	  			padding: 15px 0;
 
 	  			h2 {
 	  				margin: 0 0 20px;	
@@ -80,12 +86,119 @@
 	  			h4 {
 	  				color: #3d7da5;
 	  			}
+
+					.tiles-section {
+						text-align: center;
+					}
+
+					#donation-form {
+						h1 {
+							background-color: white;
+						}
+
+						.warning {
+							margin-top: 35px;
+						}
+
+						.form-top-text {
+							background-color: white;
+							margin: 20px 0;
+						}
+
+						.donation-method-selector {
+							background-color: white;
+
+							p {
+								margin-bottom: 20px;
+							}
+
+							.radio-inline {
+								margin-left: 20px;
+							}
+
+							.donation-details {
+								margin: 20px 0;
+								padding: 10px 0;
+								border-top: 1px solid grey;
+								border-bottom: 1px solid grey;
+
+								.donation-detail-label {
+									display: inline-block;
+									width: 140px;
+								}
+							}
+
+							.selected-method-section {
+								margin-top: 40px;
+
+								h4 {
+									color: darkslategrey;
+								}
+
+								#{$a-tags} {
+									color: #177db1;
+									text-decoration: none;
+								}
+
+								#{$a-tags-hover} {
+									color: #92bbd0;
+								}
+							}
+						}
+					}
+
+					.donation-options {
+						background-color: white;
+
+						h3 {
+							margin: 20px 0;
+						}
+
+						h4 {
+							font-size: 15px;
+						}
+
+						p {
+							font-size: 13px;
+							color: #717171;
+						}
+					}
 	  		}
 
-	  		.monetary-donation-tab-content {
-	  			min-height: 450px; //hack to cover background only for Monetary donation pane's background
-	  			background-color: white;
-	  		}
+				.donation-tile {
+					width: 250px;
+					display: inline-block;
+					min-height: 350px;
+					margin: 15px;
+
+					@include media-below($desktop-min) {
+						width: 300px;
+						height: 400px;
+					}
+
+					.tile-image {
+						height: 250px;
+						background: url('//d35uzl96cmnmq2.cloudfront.net/processed/Resort_A_750.jpg') no-repeat center;
+						background-size: cover;
+						cursor: pointer;
+
+						@include media-below($desktop-min) {
+							width: 300px;
+							height: 300px;
+						}
+					}
+
+					.title {
+						font-size: 14px;
+						font-family: "Playfair Display";
+					}
+
+					.donation-amount {
+						font-size: 14px;
+						font-family: "Playfair Display";
+						color: #177db1;
+					}
+				}
 
 	  		.coming-soon-placeholder {
 	  			font-size: 24px;
