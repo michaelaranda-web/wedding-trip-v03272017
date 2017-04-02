@@ -25,7 +25,8 @@ export class Donate extends React.Component {
     return (
       <div className="tiles-section">
         <DonationTile onClickHandler={this.onTileSelect.bind(this)}
-                      donationItem={{title: "A Unicorn", amount: "$5,000"}}/>
+                      donationItem={{title: "Breakfast at Tsukiji Fish Market", amount: "$20"}}
+                      imageSrc={require('../icons/tsukiji_breakfast.png')} />
         <DonationTile onClickHandler={this.onTileSelect.bind(this)}
                       donationItem={{title: "A Pony", amount: "$1,000"}}/>
         <DonationTile onClickHandler={this.onTileSelect.bind(this)} />

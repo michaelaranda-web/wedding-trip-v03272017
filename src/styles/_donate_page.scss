@@ -38,7 +38,8 @@
 
 	.explanation {
 		background-color: white;
-		padding: 15px 40px;
+		padding: 30px 40px;
+		margin: 0;
 		border-top: 5px solid goldenrod;
 		border-bottom: 5px solid goldenrod;
 		font-size: 13px;
@@ -46,14 +47,13 @@
 
   .donation-section {
   	min-height: 600px;
-  	margin-top: 30px;
   	padding: 0 20px 40px;
 
   	background-color: white;
 
   	#donation-browser {
   		min-height: 480px;
-			padding-bottom: 100px;
+			padding: 20px 0 100px;
 			background: url('../icons/donations-background.png') no-repeat;
 
   		.donation-categories {
@@ -62,6 +62,7 @@
 
 		  		a {
 						background-color: #e0ad39;
+						font-family: "Playfair Display SC";
 						font-weight: bold;
 		  		}
 	  		}
@@ -177,9 +178,9 @@
 					}
 
 					.tile-image {
+						width: 250px;
 						height: 250px;
-						background: url('//d35uzl96cmnmq2.cloudfront.net/processed/Resort_A_750.jpg') no-repeat center;
-						background-size: cover;
+						margin-bottom: 10px;
 						cursor: pointer;
 
 						@include media-below($desktop-min) {

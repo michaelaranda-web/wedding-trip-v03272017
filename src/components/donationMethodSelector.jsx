@@ -20,26 +20,26 @@ export class DonationMethodSelector extends React.Component {
         return (
           <div>
             <h4>Using Paypal:</h4>
-            <div>Visit the <a target="_blank" href="https://www.paypal.com/myaccount/transfer/send">Paypal transfer page </a>
+            <p>Visit the <a target="_blank" href="https://www.paypal.com/myaccount/transfer/send">Paypal transfer page </a>
               and send your donation to <strong>michaelaranda0@gmail.com</strong>, using your Paypal account.
-              It is free to both create an account and to send money to someone.</div>
+              It is free to both create an account and to send money to someone.</p>
           </div>
         );
       case "venmo":
         return (
           <div>
             <h4>Using Venmo:</h4>
-            <div>Vist the <a target="_blank" href="https://venmo.com/">Venmo website</a> or use the Venmo mobile app, and send your donation
-              to <strong>Michael-Aranda-1</strong>. It is free to both create an account and to send money to someone.</div>
+            <p>Vist the <a target="_blank" href="https://venmo.com/">Venmo website</a> or use the Venmo mobile app, and send your donation
+              to <strong>Michael-Aranda-1</strong>. It is free to both create an account and to send money to someone.</p>
           </div>
         );
       default:
         return (
           <div>
             <h4>Sending a check/cash:</h4>
-            <div>To avoid posting our home address on this public website, Martina and I have chosen to only share our
+            <p>To avoid posting our home address on this public website, Martina and I have chosen to only share our
             home address to sponsors in a personal manner. Because you filled out the previous form, we know who to contact
-            and will personally get in touch with you through e-mail, Facebook, or text.</div>
+            and will personally get in touch with you through e-mail, Facebook, or text.</p>
           </div>
         );
     }

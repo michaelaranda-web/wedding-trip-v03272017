@@ -51,7 +51,7 @@ export class DonationForm extends React.Component {
           <p className="warning">Clicking on 'Submit and Continue' will indicate that you wish to reserve this trip fund item.
             The item will be made unavailable for others to donate to.</p>
 
-          <Button onClick={this.onSubmitAndContinue.bind(this)}>
+          <Button bsStyle="primary" onClick={this.onSubmitAndContinue.bind(this)}>
             Submit and Continue
           </Button>
         </div>
