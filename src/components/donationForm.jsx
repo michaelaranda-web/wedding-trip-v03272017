@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery'
 import { FormGroup, FormControl, ControlLabel, Radio, Button } from 'react-bootstrap';
 import { DonationMethodSelector } from './donationMethodSelector.jsx';
 
@@ -18,6 +19,23 @@ export class DonationForm extends React.Component {
   }
 
   onSubmitAndContinue() {
+    $.ajax({
+      type: "POST",
+      url: "/api/submit_donation",
+      // The key needs to match your method's input parameter (case-sensitive).
+      data: JSON.stringify({
+        name: "Donald Duck",
+        email: "Duckburg",
+        comment: "Daisy!!!!"
+      }),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function(data){alert(data);},
+      failure: function(errMsg) {
+        alert(errMsg);
+      }
+    });
+
     this.setState({currentStep: "sponsor-method-selector"});
   }
 
