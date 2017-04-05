@@ -21,7 +21,7 @@ export class DonationMethodSelector extends React.Component {
           <div>
             <h4>Using Paypal:</h4>
             <p>Visit the <a target="_blank" href="https://www.paypal.com/myaccount/transfer/send">Paypal transfer page </a>
-              and send your donation to <strong>michaelaranda0@gmail.com</strong>, using your Paypal account.
+              and send your donation to <span className="email-address">michaelaranda0@gmail.com</span>, using your Paypal account.
               It is free to both create an account and to send money to someone.</p>
           </div>
         );
@@ -30,7 +30,7 @@ export class DonationMethodSelector extends React.Component {
           <div>
             <h4>Using Venmo:</h4>
             <p>Vist the <a target="_blank" href="https://venmo.com/">Venmo website</a> or use the Venmo mobile app, and send your donation
-              to <strong>Michael-Aranda-1</strong>. It is free to both create an account and to send money to someone.</p>
+              to <span className="email-address">Michael-Aranda-1</span>. It is free to both create an account and to send money to someone.</p>
           </div>
         );
       default:

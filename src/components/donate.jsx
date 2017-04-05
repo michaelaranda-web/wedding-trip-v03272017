@@ -31,17 +31,17 @@ export class Donate extends React.Component {
                       donationItem={{title: "Ramen in Shibuya", amount: "$20"}}
                       imageSrc={require('../icons/shibuya_ramen.png')} />
         <DonationTile onClickHandler={this.onTileSelect.bind(this)}
-                      donationItem={{title: "Taiwan Night Market Snacks", amount: "$20"}}
-                      imageSrc={require('../icons/taiwan_night_market.png')} />
+                      donationItem={{title: "Dinner for Two in Tokyo", amount: "$50"}}
+                      imageSrc={require('../icons/tokyo_dinner.png')} />
         <DonationTile onClickHandler={this.onTileSelect.bind(this)}
                       donationItem={{title: "Taiwan Night Market Snacks", amount: "$20"}}
-                      imageSrc={require('../icons/taiwan_night_market_2.png')} />
+                      imageSrc={require('../icons/taiwan_night_market.png')} />
         <DonationTile onClickHandler={this.onTileSelect.bind(this)}
                       donationItem={{title: "Dinner for Two in Taipei", amount: "$50"}}
                       imageSrc={require('../icons/taipei_dinner.png')} />
         <DonationTile onClickHandler={this.onTileSelect.bind(this)}
-                      donationItem={{title: "Dinner for Two in Tokyo", amount: "$20"}}
-                      imageSrc={require('../icons/tokyo_dinner.png')} />
+                      donationItem={{title: "Taiwan Night Market Snacks", amount: "$20"}}
+                      imageSrc={require('../icons/taiwan_night_market_2.png')} />
         <DonationTile onClickHandler={this.onTileSelect.bind(this)}
                       donationItem={{title: "Tea at Maokong", amount: "$20"}}
                       imageSrc={require('../icons/teapot.png')} />
@@ -124,11 +124,11 @@ export class Donate extends React.Component {
           </div>
           <div>
             <h4>Via Paypal</h4>
-            <p>michaelaranda0@gmail.com</p>
+            <p><span className="donation-option-account">michaelaranda0@gmail.com</span></p>
           </div>
           <div>
             <h4>Via Venmo</h4>
-            <p>@Michael-Aranda-1</p>
+            <p><span className="donation-option-account">@Michael-Aranda-1</span></p>
           </div>
         </div>
       </div>

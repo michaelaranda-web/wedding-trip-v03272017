@@ -128,6 +128,11 @@
 							.selected-method-section {
 								margin-top: 40px;
 
+								.email-address {
+									font-weight: bold;
+									font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+								}
+
 								h4 {
 									color: darkslategrey;
 								}
@@ -146,6 +151,10 @@
 
 					.donation-options {
 						background-color: white;
+
+						.donation-option-account {
+							font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+						}
 
 						h3 {
 							margin: 20px 0;
