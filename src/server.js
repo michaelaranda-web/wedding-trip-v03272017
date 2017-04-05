@@ -2,20 +2,46 @@ const path = require('path');
 const express = require('express');
 const fs = require("fs");
 const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 
 module.exports = {
-  writeToFile: function (pathToWrite, requestBody) {
-    let donationEntry = "Name: " + requestBody.name + "\n" +
-        "Email: " + requestBody.email + "\n" +
-        "Comment: " + requestBody.comment + "\n\n";
-
-    fs.appendFile(pathToWrite + "/donation_submissions.txt", donationEntry, function(err) {
-      if(err) {
-        return console.log(err);
+  sendDonationNotificationEmail: function (req, res) {
+    let transporter = nodemailer.createTransport({
+      service: 'Gmail',
+      auth: {
+        user: 'martina.michael.wedding.trip@gmail.com', // Your email id
+        pass: 'weddingtrip2017' // Your password
       }
-
-      console.log("The file was saved!");
     });
+
+    let text = this.createEmailBody(req);
+    let mailOptions = {
+      from: 'martina.michael.wedding.trip@gmail.com', // sender address
+      to: 'michaelaranda0@gmail.com', // list of receivers
+      subject: 'Donation received from ' + req.body.name + '!', // Subject line
+      text: text //, // plaintext body
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+      if(error){
+        console.log(error);
+        res.json({yo: 'error'});
+      }else{
+        console.log('Message sent: ' + info.response);
+        res.json({yo: info.response});
+      };
+    });
+  },
+
+  createEmailBody(req) {
+    let text = "Hooray! A donation was just made to the M+M Wedding Trip.\n" +
+        "\nDonation from:" + req.body.name +
+        "\nEmail: " + req.body.email +
+        "\nDonation Item: " + req.body.donationItem +
+        "\nDonation Amount: " + req.body.donationAmount +
+        "\nComment: " + req.body.comment;
+
+    return text;
   },
 
   app: function () {
@@ -30,8 +56,7 @@ module.exports = {
     app.use(bodyParser.json());
     app.get('/', function (_, res) { res.sendFile(indexPath) });
     app.post('/api/submit_donation', function (req, res) {
-      self.writeToFile(path.join(__dirname, '/../donations'), req.body);
-      res.sendStatus(200);
+      self.sendDonationNotificationEmail(req, res);
     });
 
     return app;

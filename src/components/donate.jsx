@@ -28,11 +28,38 @@ export class Donate extends React.Component {
                       donationItem={{title: "Breakfast at Tsukiji Fish Market", amount: "$20"}}
                       imageSrc={require('../icons/tsukiji_breakfast.png')} />
         <DonationTile onClickHandler={this.onTileSelect.bind(this)}
-                      donationItem={{title: "A Pony", amount: "$1,000"}}/>
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
+                      donationItem={{title: "Ramen in Shibuya", amount: "$20"}}
+                      imageSrc={require('../icons/shibuya_ramen.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Taiwan Night Market Snacks", amount: "$20"}}
+                      imageSrc={require('../icons/taiwan_night_market.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Taiwan Night Market Snacks", amount: "$20"}}
+                      imageSrc={require('../icons/taiwan_night_market_2.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Dinner for Two in Taipei", amount: "$50"}}
+                      imageSrc={require('../icons/taipei_dinner.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Dinner for Two in Tokyo", amount: "$20"}}
+                      imageSrc={require('../icons/tokyo_dinner.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Tea at Maokong", amount: "$20"}}
+                      imageSrc={require('../icons/teapot.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Nagashi Somen at Hirobun", amount: "$30"}}
+                      imageSrc={require('../icons/hirobun_somen.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Hawaiian Snowcones", amount: "$20"}}
+                      imageSrc={require('../icons/snowcones.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Japanese Bento", amount: "$20"}}
+                      imageSrc={require('../icons/bento_box.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Sunset Dinner in Honolulu", amount: "$50"}}
+                      imageSrc={require('../icons/hawaii_sunset.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Hawaii Coconuts", amount: "$10"}}
+                      imageSrc={require('../icons/coconut.png')} />
       </div>
     );
   }
@@ -40,12 +67,27 @@ export class Donate extends React.Component {
   renderActivityOptions() {
     return (
       <div className="tiles-section">
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Visit to Akiba Fukurou", amount: "$40"}}
+                      imageSrc={require('../icons/akiba_fukurou.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Ride on Maokong Gondola", amount: "$20"}}
+                      imageSrc={require('../icons/maokong_gondola.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Entrance to National Place Museum", amount: "$15"}}
+                      imageSrc={require('../icons/national_palace_museum.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Tickets to Dole Pineapple Garden Maze", amount: "$16"}}
+                      imageSrc={require('../icons/pineapple_maze.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Surf Rentals in Hawaii", amount: "$50"}}
+                      imageSrc={require('../icons/hawaii_surfing.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Snorkeling in Hawaii", amount: "$50"}}
+                      imageSrc={require('../icons/hawaii_snorkeling.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Onsen in Japan", amount: "$25"}}
+                      imageSrc={require('../icons/japan_onsen.png')} />
       </div>
     );
   }
@@ -53,12 +95,15 @@ export class Donate extends React.Component {
   renderMiscellaneousOptions() {
     return (
       <div className="tiles-section">
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
-        <DonationTile onClickHandler={this.onTileSelect.bind(this)} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "One-night stay at Ryokan in Kyoto", amount: "$100"}}
+                      imageSrc={require('../icons/ryokan_shizumu.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "Flight from Japan to Taiwan", amount: "$100"}}
+                      imageSrc={require('../icons/flight.png')} />
+        <DonationTile onClickHandler={this.onTileSelect.bind(this)}
+                      donationItem={{title: "JR Rail Pass", amount: "$75"}}
+                      imageSrc={require('../icons/japan_rail_pass.png')} />
       </div>
     );
   }

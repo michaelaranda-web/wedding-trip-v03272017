@@ -23,11 +23,7 @@ export class DonationForm extends React.Component {
       type: "POST",
       url: "/api/submit_donation",
       // The key needs to match your method's input parameter (case-sensitive).
-      data: JSON.stringify({
-        name: "Donald Duck",
-        email: "Duckburg",
-        comment: "Daisy!!!!"
-      }),
+      data: this._getSubmitDonationStr(),
       contentType: "application/json; charset=utf-8",
       dataType: "json",
       success: function(data){alert(data);},
@@ -52,22 +48,21 @@ export class DonationForm extends React.Component {
               id="formControlsText"
               type="text"
               label="Name*"
+              name="name-field"
               placeholder="Enter name"
           />
           <FieldGroup
               id="formControlsEmail"
               type="email"
               label="Email address"
+              name="email-field"
               placeholder="Enter email"
           />
 
           <FormGroup controlId="formControlsTextarea">
             <ControlLabel>Comment</ControlLabel>
-            <FormControl componentClass="textarea" placeholder="Comment" />
+            <FormControl className="donation-comment" componentClass="textarea" placeholder="Comment" />
           </FormGroup>
-
-          <p className="warning">Clicking on 'Submit and Continue' will indicate that you wish to reserve this trip fund item.
-            The item will be made unavailable for others to donate to.</p>
 
           <Button bsStyle="primary" onClick={this.onSubmitAndContinue.bind(this)}>
             Submit and Continue
@@ -86,6 +81,19 @@ export class DonationForm extends React.Component {
         {this.renderFormContent()}
       </form>
     );
+  }
+
+  _getSubmitDonationStr() {
+    let submitDonateStr = {};
+
+    submitDonateStr.name = $('input[name="name-field"]')[0].value;
+    submitDonateStr.email = $('input[name="email-field"]')[0].value;
+    submitDonateStr.comment = $('input[name="donation-comment"]')[0].value;
+
+    submitDonateStr.donationItem = this.props.currentDonationItem.title;
+    submitDonateStr.donationAmount = this.props.currentDonationItem.amount;
+
+    return JSON.stringify(submitDonateStr);
   }
 }
 
