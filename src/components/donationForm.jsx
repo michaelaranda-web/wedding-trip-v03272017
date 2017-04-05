@@ -26,7 +26,7 @@ export class DonationForm extends React.Component {
       data: this._getSubmitDonationStr(),
       contentType: "application/json; charset=utf-8",
       dataType: "json",
-      success: function(data){alert(data);},
+      success: function(data){},
       failure: function(errMsg) {
         alert(errMsg);
       }
@@ -88,7 +88,7 @@ export class DonationForm extends React.Component {
 
     submitDonateStr.name = $('input[name="name-field"]')[0].value;
     submitDonateStr.email = $('input[name="email-field"]')[0].value;
-    submitDonateStr.comment = $('input[name="donation-comment"]')[0].value;
+    submitDonateStr.comment = $('.donation-comment')[0].value;
 
     submitDonateStr.donationItem = this.props.currentDonationItem.title;
     submitDonateStr.donationAmount = this.props.currentDonationItem.amount;
