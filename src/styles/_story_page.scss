@@ -29,8 +29,14 @@
     }
   }
 
+  h4 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
   .story-items {
     margin: 0 15px 75px;
+    font-size: 12.8px;
 
     &::after { 
       content: " "; 
@@ -47,31 +53,23 @@
         height: 270px;
         width: 270px;
         display: inline-block;
+        font-family: "Playfair Display";
 
-        &:hover {
-          cursor: pointer;
+        &.year-2008, &.year-2009, &.year-2010-2011, &.year-2012, &.year-2013, &.year-2014-2015,
+        &.year-2015, &.year-2015-2016, &.year-2016, &.year-2017 {
+          top: 25px;
+          color: transparent;
 
-          filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-          /* This works in IE 8 & 9 too */
-          /* ... but also 5, 6, 7 */
-          filter: alpha(opacity=0);
-
-          /* Older than Firefox 0.9 */
-          -moz-opacity:0;
-
-          /* Safari 1.x (pre WebKit!) */
-          -khtml-opacity: 0;
-
-          /* Modern!
-          /* Firefox 0.9+, Safari 2?, Chrome any?
-          /* Opera 9+, IE 9+ */
-          opacity: 0;
+          &:hover {
+            cursor: pointer;
+            background: transparent;
+            color: black;
+          }
         }
 
         &.year-2008 {
           background: url("../icons/our_story/OurStoryIcon_2008.png") no-repeat;
           background-size: contain;
-          top: 25px;
         }
 
         &.year-2009 {
@@ -121,16 +119,18 @@
         &.year-2017 {
           background: url("../icons/our_story/OurStoryIcon_2017.png") no-repeat;
           background-size: contain;
-          left: 30px;
+
+          @include media-below($tablet-portrait-max) {
+            left: 30px;
+          }
 
           @include media-above($tablet-landscape-min) {
-            width: 400px;
-            height: 400px;
+            height: 430px;
           }
         }
       }
 
-      &.year-2017 {
+      &.bottom-section {
         background-color: #fff5c6;
 
         @include media-between($tablet-portrait-min, $tablet-landscape-min) {
@@ -140,7 +140,6 @@
         @include media-above($tablet-landscape-min) {
           width: 100%;
           margin-top: 100px;
-          padding-bottom: 20px;
         }
       }
     }
